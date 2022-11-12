@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Clock App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background"></div>
+      <div class="clock-app">
+        <div class="quotes"></div>
+
+        <div class="clock">
+          <h4 class="time-header"></h4>
+          <div class="time"></div>
+          <div class="place-clock">
+            <div class="place"></div>
+            <div class="clock-2">
+              <a href="#container-2"
+                >MORE <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="details" id="container-2">
+          <div>
+            <p>CURRENT TIMEZONE</p>
+            <div class="current-timezone"></div>
+          </div>
+          <div>
+            <p>DAY OF THE WEEK</p>
+            <div class="week"></div>
+          </div>
+          <div>
+            <p>DAY OF THE YEAR</p>
+            <div class="year"></div>
+          </div>
+          <div>
+            <p>WEEK NUMBER</p>
+            <div class="week-number"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

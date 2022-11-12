@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.clock-app {
+  color: #fff;
+}
+
+.night {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./desktop/bg-image-nighttime.jpg");
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.day {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("./desktop/bg-image-daytime.jpg");
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* quotes */
+.quotes {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 70px 0 0 130px;
+}
+.quotes p {
+  margin: 0;
+  margin-bottom: 19px;
+  font-size: 1.3rem;
+}
+
+.quotes span {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.rotate {
+  cursor: pointer;
+}
+/* clock */
+.clock {
+  padding: 86px 0 0 130px;
+  margin-bottom: 50px;
+}
+
+.time {
+  font-size: 185px;
+  font-weight: bolder;
+}
+.place {
+  font-size: 18px;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  padding: 0;
+}
+.time-header {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  padding: 0;
+}
+/* more and less */
+.place-clock {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  margin-right: 17%;
+  font-size: 14px;
+}
+.clock-2 {
+  width: max-content;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 15px 12px;
+  background-color: #fff;
+  color: #000;
+}
+.clock-2 a {
+  color: black;
+  text-decoration: none;
+}
+
+/* more details */
+.details {
+  display: none;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 55px;
+}
+
+.details p {
+  font-size: 15px;
+  text-indent: 80px;
+  letter-spacing: 0.2rem;
+}
+.current-timezone,
+.week,
+.year,
+.week-number {
+  font-size: 50px;
+  font-weight: 800;
+  text-indent: 80px;
+}
+.hidden {
+  display: grid;
+}
+
+/* mobile version */
+@media screen and (max-width: 992px) {
+  .place-clock {
+    display: block;
+  }
+  .clock-2 {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .current-timezone,
+  .week,
+  .year,
+  .week-number {
+    font-size: 35px;
+    font-weight: 800;
+    text-indent: 50px;
+  }
+  .details p {
+    text-indent: 50px;
+  }
+  .quotes {
+    padding: 70px 0 0 100px;
+  }
+  .clock {
+    padding: 82px 0 0 100px;
+  }
+  .night {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("./tablet/bg-image-nighttime.jpg");
+  }
+  .day {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("./tablet/bg-image-daytime.jpg");
+  }
+}
+@media screen and (max-width: 720px) {
+  .details {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+  }
+  .time {
+    font-size: 130px;
+  }
+  .place {
+    font-size: 14px;
+  }
+  .time-header {
+    font-size: 1rem;
+  }
+  .quotes p {
+    margin-bottom: 14px;
+    font-size: 1rem;
+  }
+  .quotes span {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .time {
+    font-size: 100px;
+  }
+  .place {
+    font-size: 12px;
+  }
+  .time-header {
+    font-size: 0.8rem;
+  }
+  .quotes p {
+    font-size: 0.9rem;
+  }
+  .quotes span {
+    font-size: 0.9rem;
+  }
+  .quotes {
+    padding: 70px 0 0 85px;
+  }
+  .clock {
+    padding: 86px 0 0 85px;
+  }
+  .quotes {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .quotes {
+    padding: 56px 0 0 32px;
+  }
+  .clock {
+    margin-top: 280px;
+    padding: 50px 0 0 32px;
+  }
+  .time {
+    font-size: 85px;
+  }
+  .time-header {
+    font-size: 0.7rem;
+  }
+  .details p {
+    font-size: 12px;
+    text-indent: 0px;
+  }
+  .current-timezone,
+  .week,
+  .year,
+  .week-number {
+    font-size: 35px;
+    text-indent: 0px;
+  }
+  .night {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("./mobile/bg-image-nighttime.jpg");
+  }
+  .day {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+      url("./mobile/bg-image-daytime.jpg");
+  }
+}
